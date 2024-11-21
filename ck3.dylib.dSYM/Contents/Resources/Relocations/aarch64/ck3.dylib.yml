@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/x0y14/dev/tree-sitter-ck3/ck3.dylib'
+relocations:     []
+...
