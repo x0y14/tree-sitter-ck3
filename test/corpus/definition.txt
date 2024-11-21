@@ -1,0 +1,12 @@
+===
+DEFINITION
+===
+
+@correct_culture_primar_score = yes
+
+---
+
+(source_file
+    (definition
+        (identifier)
+        (identifier)))

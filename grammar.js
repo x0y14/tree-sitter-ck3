@@ -10,7 +10,19 @@ module.exports = grammar({
         source_file: $ => repeat($._top_level),
 
         _top_level: $ => choice(
+            $.definition,
         ),
+
+        definition: $ => seq(
+            "@",
+            $.identifier,
+            "=",
+            choice($.identifier)
+        ),
+
+        identifier: $ => token(seq(
+            /[a-zA-Z_]+/
+        )),
 
         comment: $ => token(
             seq(
