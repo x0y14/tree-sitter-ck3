@@ -3,10 +3,18 @@ DEFINITION
 ===
 
 @correct_culture_primar_score = yes
+@sale_of_titles_cooldown_time = 1825
+@neg1_max = 0.5
 
 ---
 
 (source_file
     (definition
         (identifier)
-        (identifier)))
+        (boolean))
+    (definition
+        (identifier)
+        (number))
+    (definition
+        (identifier)
+        (number)))

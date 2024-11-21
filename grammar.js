@@ -17,11 +17,24 @@ module.exports = grammar({
             "@",
             $.identifier,
             "=",
-            choice($.identifier)
+            choice($.identifier, $.boolean, $.number)
+        ),
+
+        boolean: $ => choice(
+            "yes",
+            "no"
+        ),
+
+        number: $ => token(
+            seq(
+                /\d/,
+                /[\.\d]*/,
+            )
         ),
 
         identifier: $ => token(seq(
-            /[a-zA-Z_]+/
+            /[a-zA-Z_]/,
+            /[a-zA-Z_\d]*/,
         )),
 
         comment: $ => token(
